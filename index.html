@@ -3,10 +3,10 @@
 <html lang="zh-Hans">
 <head>
     <meta charset="utf-8" />
-    <title>摸鱼小屋</title>
+    <title>摸鱼の小屋</title>
     <meta name="author" content="yuumoyu" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
+    <meta name="description" content="omomo" />
+    <meta name="keywords" content="moyu" />
     <meta
         name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
@@ -53,7 +53,7 @@
         <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
     <nav id="desktop-menu">
         <a class="title" href="/">
-            <span>摸鱼小屋</span>
+            <span>摸鱼の小屋</span>
         </a>
         
         <a href="/">
@@ -85,7 +85,7 @@
     <nav id="mobile-menu">
         <div class="title" @click="showMenuItems = !showMenuItems">
             <i class="fa-solid fa-bars fa-fw"></i>
-            <span>&emsp;摸鱼小屋</span>
+            <span>&emsp;摸鱼の小屋</span>
         </div>
         <transition name="slide">
             <div class="items" v-show="showMenuItems">
@@ -157,9 +157,9 @@
         <span class="loop"></span>
         <span class="info">
             <div class="wrap">
-                <h1>摸鱼小屋</h1>
-                <h3></h3>
-                <h5></h5>
+                <h1>摸鱼の小屋</h1>
+                <h3>我鱼呢</h3>
+                <h5>omomo</h5>
             </div>
         </span>
     </div>
@@ -228,209 +228,6 @@
 <p><strong>3) 每个元素在数组中有一个位置, 以数字表示,称为<em>索引</em>(有时也称为下标)。</strong></p>
 <p><strong>4) 数组的元素可以是任何类型。</strong></p>
 <p><strong>5) 数组索引从 0 开始,数组最大能容纳 4294967295 个元素</strong></p>
-<h2 id="2-创建数组"><a href="#2-创建数组" class="headerlink" title="2 创建数组"></a>2 创建数组</h2><h3 id="2-1-使用数组直接量"><a href="#2-1-使用数组直接量" class="headerlink" title="2.1 使用数组直接量"></a>2.1 使用数组直接量</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//定义数组，一般就用这种简写方式</span></span><br><span class="line"><span class="keyword">var</span> arr = [<span class="string">&quot;西瓜&quot;</span>,<span class="string">&quot;柚子&quot;</span>,<span class="number">111</span>,<span class="literal">true</span>,<span class="string">&quot;adc&quot;</span>,<span class="string">&quot;[111,222,333]&quot;</span>]</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr);</span><br><span class="line"></span><br><span class="line"><span class="comment">//其他方式</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//其一</span></span><br><span class="line"><span class="keyword">var</span> arr01=[];</span><br><span class="line">arr01[<span class="number">0</span>]=<span class="number">111</span>;</span><br><span class="line">arr01[<span class="number">1</span>]=<span class="number">222</span>;</span><br><span class="line">arr01[<span class="number">2</span>]=<span class="number">333</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//其二 构造函数创建</span></span><br><span class="line"><span class="keyword">var</span> arr02=<span class="keyword">new</span> <span class="title class_">Array</span>();</span><br><span class="line">arr02[<span class="number">0</span>]=<span class="number">111</span>;</span><br><span class="line">arr02[<span class="number">1</span>]=<span class="number">222</span>;</span><br><span class="line">arr02[<span class="number">2</span>]=<span class="number">333</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr02);</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="3-读写数组元素"><a href="#3-读写数组元素" class="headerlink" title="3 读写数组元素"></a>3 读写数组元素</h2><p><strong>使用操作符</strong>[]<strong>来读写数组的每一个元素,</strong>[]<strong>中是数组的索引。</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 读取数组中元素的值</span></span><br><span class="line"></span><br><span class="line">arr[<span class="number">0</span>];</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr[<span class="number">0</span>]);</span><br><span class="line"></span><br><span class="line"><span class="comment">//未赋值的元素默认为undefined</span></span><br><span class="line"></span><br><span class="line">arr[<span class="number">100</span>]；</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr[<span class="number">100</span>]);</span><br><span class="line"></span><br><span class="line">**<span class="comment">// 给数组中的元素赋值**</span></span><br><span class="line"></span><br><span class="line">nameList[<span class="number">2</span>] =<span class="number">100</span>;</span><br></pre></td></tr></table></figure>
-
-<p><strong>数组可以通过</strong>length<strong>属性获取数组的长度，也就是数组中元素的个数。</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">arr.length; // 获取数组 nameList 的长度</span><br><span class="line"></span><br><span class="line">console.log(arr.length);</span><br></pre></td></tr></table></figure>
-
-<p><strong>数组length属性的特别之处（他不是只读的，通过修改length，可以从数组末尾删除或添加元素）</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">console.log(arr);</span><br><span class="line"></span><br><span class="line">arr.length=5;</span><br><span class="line"></span><br><span class="line">console.log(arr);</span><br></pre></td></tr></table></figure>
-
-<h2 id="4-遍历数组（迭代）"><a href="#4-遍历数组（迭代）" class="headerlink" title="4 遍历数组（迭代）"></a>4 遍历数组（迭代）</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// for 循环遍历</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (vari = <span class="number">0</span>; i &lt; arr.<span class="property">length</span>; i ++) &#123;</span><br><span class="line"></span><br><span class="line">    arr[i]</span><br><span class="line"></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(arr[i])</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//for in 循环</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i <span class="keyword">in</span>  arr) &#123;</span><br><span class="line"></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(arr[i])</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="5-多维数组"><a href="#5-多维数组" class="headerlink" title="5 多维数组"></a>5 多维数组</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// 创建多维数组 从cityList[0][0]开始</span><br><span class="line">var cityList = [</span><br><span class="line">  [&#x27;广州&#x27;, &#x27;深圳&#x27;, &#x27;佛山&#x27;, &#x27;东莞&#x27;, &#x27;惠州&#x27;],</span><br><span class="line">  [&#x27;南京&#x27;, &#x27;苏州&#x27;, &#x27;徐州&#x27;, &#x27;无锡&#x27;, &#x27;南通&#x27;],</span><br><span class="line">  [&#x27;济南&#x27;, &#x27;青岛&#x27;, &#x27;烟台&#x27;, &#x27;潍坊&#x27;, &#x27;淄博&#x27;],</span><br><span class="line">  [&#x27;杭州&#x27;, &#x27;宁波&#x27;, &#x27;温州&#x27;, &#x27;绍兴&#x27;, &#x27;湖州&#x27;]</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line">// 多维数组取值</span><br><span class="line"></span><br><span class="line">console.log(cityList[2][1]);</span><br></pre></td></tr></table></figure>
-
-<h2 id="6字符串具有数组的特性"><a href="#6字符串具有数组的特性" class="headerlink" title="6字符串具有数组的特性"></a>6字符串具有数组的特性</h2><p><strong>1）字符串可以通过</strong>[]<strong>取到指定的字符，只能取值无法修改。</strong></p>
-<p><strong>2）字符串属性</strong>.length<strong>可获取字符串的长度（字符的个数）。</strong></p>
-<p><strong>3）字符串可以向数组那样遍历。</strong></p>
-<h2 id="7-数组方法"><a href="#7-数组方法" class="headerlink" title="7 数组方法"></a>7 数组方法</h2><h4 id="1）push："><a href="#1）push：" class="headerlink" title="1）push："></a>1）push：</h4><ul>
-<li><strong>作用：向数组末尾追加某一项</strong></li>
-<li><strong>参数：添加的具体项，可以是一项,也可以是多项</strong></li>
-<li><strong>返回值：新数组的长度</strong></li>
-<li><strong>是否改变原数组：改变</strong></li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">varfruits=[&quot;西瓜&quot;,&quot;苹果&quot;,&quot;柚子&quot;,&quot;橘子&quot;];</span><br><span class="line"></span><br><span class="line">varnewFruits=fruits.push(&quot;大西瓜&quot;);</span><br><span class="line"></span><br><span class="line">console.log(newFruits);</span><br><span class="line"></span><br><span class="line">console.log(fruits);</span><br></pre></td></tr></table></figure>
-
-<h4 id="2）pop："><a href="#2）pop：" class="headerlink" title="2）pop："></a>2）pop：</h4><ul>
-<li><strong>作用：删除数组的最后一项</strong></li>
-<li><strong>参数：无</strong></li>
-<li><strong>返回值：删除的项</strong></li>
-<li><strong>是否改变原数组：改变</strong></li>
-<li></li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">varfruits=[&quot;西瓜&quot;,&quot;苹果&quot;,&quot;柚子&quot;,&quot;橘子&quot;];</span><br><span class="line"></span><br><span class="line">varnewFruits=fruits.pop(&quot;柚子&quot;);</span><br><span class="line"></span><br><span class="line">console.log(newFruits);</span><br><span class="line"></span><br><span class="line">console.log(fruits);</span><br></pre></td></tr></table></figure>
-
-<h4 id="3）shift："><a href="#3）shift：" class="headerlink" title="3）shift："></a>3）shift：</h4><ul>
-<li><strong>作用：删除数组的第一项</strong></li>
-<li><strong>参数：无</strong></li>
-<li><strong>返回值：删除的项</strong></li>
-<li><strong>是否改变原数组：改变</strong></li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">varfruits=[&quot;西瓜&quot;,&quot;苹果&quot;,&quot;柚子&quot;,&quot;橘子&quot;];</span><br><span class="line"></span><br><span class="line">varnewFruits=fruits.shift();</span><br><span class="line"></span><br><span class="line">console.log(newFruits);</span><br><span class="line"></span><br><span class="line">console.log(fruits);</span><br></pre></td></tr></table></figure>
-
-<h4 id="4-unshift："><a href="#4-unshift：" class="headerlink" title="4)unshift："></a>4)unshift：</h4><ul>
-<li><strong>作用：向数组的开头添加内容</strong></li>
-<li><strong>参数：添加的内容</strong></li>
-<li><strong>返回值：新数组的长度</strong></li>
-<li><strong>是否改变原数组：改变</strong></li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">varfruits=[&quot;西瓜&quot;,&quot;苹果&quot;,&quot;柚子&quot;,&quot;橘子&quot;];</span><br><span class="line"></span><br><span class="line">varnewFruits=fruits.unshift(&quot;大西瓜&quot;);</span><br><span class="line"></span><br><span class="line">console.log(newFruits);</span><br><span class="line"></span><br><span class="line">console.log(fruits);</span><br></pre></td></tr></table></figure>
-
-<h4 id="5-reverse-倒序"><a href="#5-reverse-倒序" class="headerlink" title="5)reverse 倒序"></a>5)reverse 倒序</h4><ul>
-<li><strong>作用：把数组元素反向排列</strong></li>
-<li><strong>参数：无</strong></li>
-<li><strong>返回值：返回值是排序后的新数组</strong></li>
-<li><strong>是否改变原数组：改变</strong></li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">varfruits=[&quot;西瓜&quot;,&quot;苹果&quot;,&quot;柚子&quot;,&quot;橘子&quot;];</span><br><span class="line"></span><br><span class="line">varnewFruits=fruits.reverse();</span><br><span class="line"></span><br><span class="line">console.log(newFruits);</span><br><span class="line"></span><br><span class="line">console.log(fruits);</span><br></pre></td></tr></table></figure>
-
-<h4 id="6-sort-排序"><a href="#6-sort-排序" class="headerlink" title="6) sort 排序"></a>6) sort 排序</h4><ul>
-<li><strong>作用：把数组进行排序</strong></li>
-<li><strong>参数：无或者是一个函数</strong></li>
-<li><strong>返回值：排序后的新数组</strong></li>
-<li><strong>是否改变原数组：改变</strong></li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">//不传参数，默认排序从小到大</span><br><span class="line"></span><br><span class="line">vararr01=[1,3,6,4,2,7];</span><br><span class="line"></span><br><span class="line">vararr02=arr01.sort();</span><br><span class="line"></span><br><span class="line">console.log(arr01);</span><br><span class="line"></span><br><span class="line">console.log(arr02);</span><br><span class="line"></span><br><span class="line">//传参</span><br><span class="line"></span><br><span class="line">vararr02=arr01.sort(function(a,b)&#123;</span><br><span class="line"></span><br><span class="line">  // return a-b;//升序</span><br><span class="line"></span><br><span class="line">    returnb-a//降序</span><br><span class="line"></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">console.log(arr02);</span><br></pre></td></tr></table></figure>
-
-<h4 id="7）splice（增删改一体化）"><a href="#7）splice（增删改一体化）" class="headerlink" title="7）splice（增删改一体化）"></a>7）splice（增删改一体化）</h4><ul>
-<li><strong>作用：删除&#x2F;新增&#x2F;修改</strong></li>
-<li><strong>参数：splice（n,m,…x）不能传负数</strong></li>
-<li><strong>返回值：删除的元素</strong></li>
-<li><strong>是否改变原数组：是</strong></li>
-</ul>
-<h5 id="1、删除"><a href="#1、删除" class="headerlink" title="@1、删除"></a>@1、删除</h5><p><strong>删除需要给splice传递两个参数,含头不含尾</strong></p>
-<p><strong>第一个参数：要删除的第一个元素的位置</strong></p>
-<p><strong>第二个参数：要删除的元素数量</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">varfruits=[&quot;西瓜&quot;,&quot;苹果&quot;,&quot;柚子&quot;,&quot;橘子&quot;];</span><br><span class="line"></span><br><span class="line">varnewFruits=fruits.splice(0,2);</span><br><span class="line"></span><br><span class="line">console.log(newFruits);</span><br><span class="line"></span><br><span class="line">console.log(fruits);</span><br></pre></td></tr></table></figure>
-
-<h5 id="2、新增-修改"><a href="#2、新增-修改" class="headerlink" title="@2、新增&#x2F;修改"></a>@2、新增&#x2F;修改</h5><p><strong>新增需要传递3个参数</strong></p>
-<p><strong>第一个参数：开始的位置</strong></p>
-<p><strong>第二个参数：要删除的元素数量</strong></p>
-<p><strong>第三个参数: 要插入的元素（任意个）</strong></p>
-<p><strong>注意：删除的个数和****新增的个数可以不一致</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">varfruits=[&quot;西瓜&quot;,&quot;苹果&quot;,&quot;柚子&quot;,&quot;橘子&quot;];</span><br><span class="line"></span><br><span class="line">varnewFruits=fruits.splice(0,2,&quot;新鲜西瓜&quot;,&quot;新鲜苹果&quot;);</span><br><span class="line"></span><br><span class="line">console.log(newFruits);</span><br><span class="line"></span><br><span class="line">console.log(fruits);</span><br></pre></td></tr></table></figure>
-
-<h4 id="小节"><a href="#小节" class="headerlink" title="小节"></a>小节</h4><p><strong>思考一：删除数组最后一项，你有几种方法？</strong></p>
-<p><strong>ary.pop()</strong></p>
-<p><strong>ary.splice(ary.length-1,1);</strong></p>
-<p><strong>ary.length–</strong></p>
-<p><strong>思考二：在数组末尾追加新内容，你有几种方法？</strong></p>
-<p><strong>ary.push(x);</strong></p>
-<p><strong>ary.splice(ary.length，0，x)；</strong></p>
-<p><strong>ary[ary.length]&#x3D;x;</strong></p>
-<h4 id="8）slice"><a href="#8）slice" class="headerlink" title="8）slice"></a>8）slice</h4><ul>
-<li><strong>作用：从原有的数组中选中特定的内容</strong></li>
-<li><strong>参数：可以有一个或者两个</strong></li>
-<li><strong>返回值：返回值是一个数组，返回的每一项是复制的项</strong></li>
-<li><strong>是否改变原数组：不改变</strong></li>
-</ul>
-<p><strong>@1、如果只有一个参数，slice()会返回该索引到数组末尾的所有元素</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">varfruits=[&quot;西瓜&quot;,&quot;苹果&quot;,&quot;柚子&quot;,&quot;橘子&quot;];</span><br><span class="line"></span><br><span class="line">varnewFruits=fruits.slice(1);</span><br><span class="line"></span><br><span class="line">console.log(newFruits);</span><br><span class="line"></span><br><span class="line">console.log(fruits);</span><br></pre></td></tr></table></figure>
-
-<p><strong>@2、如果有两个参数，slice()返回从开始索引到结束索引对应的所有元素。含头不含尾。</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">varfruits=[&quot;西瓜&quot;,&quot;苹果&quot;,&quot;柚子&quot;,&quot;橘子&quot;];</span><br><span class="line"></span><br><span class="line">varnewFruits=fruits.slice(1,3);</span><br><span class="line"></span><br><span class="line">console.log(newFruits);</span><br><span class="line"></span><br><span class="line">console.log(fruits);</span><br></pre></td></tr></table></figure>
-
-<p><strong>@3、如果slice()的参数有负值，那么就以数组长度加上这个负数来确定位置</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">varfruits=[&quot;西瓜&quot;,&quot;苹果&quot;,&quot;柚子&quot;,&quot;橘子&quot;];</span><br><span class="line"></span><br><span class="line">varnewFruits=fruits.slice(-2,-1);</span><br><span class="line"></span><br><span class="line">console.log(newFruits);</span><br><span class="line"></span><br><span class="line">console.log(fruits);</span><br></pre></td></tr></table></figure>
-
-<p>@4、如果结束位置小于开始位置，则返回空数组</p>
-<h4 id="9）concat"><a href="#9）concat" class="headerlink" title="9）concat"></a>9）concat</h4><ul>
-<li><strong>作用：实现多个数组或者值的拼接</strong></li>
-<li><strong>参数：数组或者值</strong></li>
-<li><strong>返回值：返回值是拼接后的新数组</strong></li>
-<li><strong>是否改变原数组：不改变</strong></li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">vararr01=[1,2,3];</span><br><span class="line"></span><br><span class="line">vararr02=[4,5,6];</span><br><span class="line"></span><br><span class="line">vararr03=arr01.concat(arr02,7,8,9);</span><br><span class="line"></span><br><span class="line">console.log(arr01);</span><br><span class="line"></span><br><span class="line">console.log(arr03);</span><br></pre></td></tr></table></figure>
-
-<h4 id="10-toString"><a href="#10-toString" class="headerlink" title="10)toString"></a>10)toString</h4><ul>
-<li><strong>作用：可以把一个数组转换为字符串</strong></li>
-<li><strong>参数：无</strong></li>
-<li><strong>返回值：返回值是转换后的字符串</strong></li>
-<li><strong>是否改变原数组：不改变</strong></li>
-<li><strong>数组中每一个元素转为字符串，然后是使用逗号连接输出显示。</strong></li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">varfruits=[&quot;西瓜&quot;,&quot;苹果&quot;,&quot;柚子&quot;,&quot;橘子&quot;];</span><br><span class="line"></span><br><span class="line">varnewFruits=fruits.toString(-2,-1);</span><br><span class="line"></span><br><span class="line">console.log(newFruits);</span><br><span class="line"></span><br><span class="line">console.log(fruits);</span><br></pre></td></tr></table></figure>
-
-<p><strong>alert方法最终体现的是字符串，会调用toString()，所以alert([1,2])结果是1，2</strong></p>
-<h4 id="11-join"><a href="#11-join" class="headerlink" title="11)join"></a>11)join</h4><ul>
-<li><strong>作用：把数组通过指定的连接符，转换为字符串</strong></li>
-<li><strong>参数：连接符</strong></li>
-<li><strong>返回值：返回值是转换后的字符串</strong></li>
-<li><strong>是否改变原数组：不改变</strong></li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">varfruits=[&quot;西瓜&quot;,&quot;苹果&quot;,&quot;柚子&quot;,&quot;橘子&quot;];</span><br><span class="line"></span><br><span class="line">varnewFruits=fruits.join(&quot;?&quot;);</span><br><span class="line"></span><br><span class="line">console.log(newFruits);</span><br><span class="line"></span><br><span class="line">console.log(fruits);</span><br></pre></td></tr></table></figure>
-
-<h4 id="12-indexOf-lastIndexOf"><a href="#12-indexOf-lastIndexOf" class="headerlink" title="12)indexOf&#x2F; lastIndexOf"></a>12)indexOf&#x2F; lastIndexOf</h4><p><strong>不兼容ie6-ie8；</strong></p>
-<ul>
-<li><p><strong>作用：获取某项在数组中(首次出现&#x2F;最后出现的) 索引（也可以用来是否包含某项）</strong></p>
-</li>
-<li><p><strong>参数：（n,m）</strong></p>
-</li>
-<li><p><strong>参数：</strong></p>
-<ul>
-<li><strong>n:检测的项</strong></li>
-<li><strong>m:如果是indexOf 的话，就是从索引m开始检索。如果是lastIndexOf 的话，就是从索引m停止检索</strong></li>
-</ul>
-</li>
-<li><p><strong>返回值：-1或者具体的索引值</strong></p>
-</li>
-<li><p><strong>是否改变原数组：不改变</strong></p>
-</li>
-</ul>
-<p>作用：检测数组中的某项在数组中（首次indexOf&#x2F;最后lastIndexOf）出现的位置</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var ary=[1,2,3,4,1,55,1];</span><br><span class="line">//检测1这个项目在数组ary 中首次出现的位置</span><br><span class="line">ary.indexOf(1); //0</span><br><span class="line">//从索引2开始，检测1这个项目在数组中首次出现的位置</span><br><span class="line">ary.indexOf(1,2); //4</span><br><span class="line"></span><br><span class="line">// 检测1这个项目在数组中最后一次出现的索引</span><br><span class="line">ary.lastIndexOf(1);</span><br><span class="line">// 检测1这个项目在数组中最后出现的索引，在索引5的位置停止检测</span><br><span class="line">ary.lastIndexOf(1,5);</span><br><span class="line"></span><br><span class="line">//如果此项在数组中没有出现，返回值就是-1</span><br><span class="line">ary.indexOf(66)===&gt;-1</span><br></pre></td></tr></table></figure>
-
-<h4 id="13）includes"><a href="#13）includes" class="headerlink" title="13）includes"></a>13）includes</h4><ul>
-<li><strong>作用：检测数组中是否包含某一项</strong></li>
-<li><strong>参数：具体项</strong></li>
-<li><strong>返回值：布尔值</strong></li>
-<li><strong>是否修改原数组：否</strong></li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">varfruits=[&quot;西瓜&quot;,&quot;苹果&quot;,&quot;柚子&quot;,&quot;橘子&quot;];</span><br><span class="line"></span><br><span class="line">varnewFruits=fruits.includes(&quot;柚子&quot;);</span><br><span class="line"></span><br><span class="line">console.log(newFruits);</span><br><span class="line"></span><br><span class="line">console.log(fruits);</span><br></pre></td></tr></table></figure>
-
-<h3 id="数组迭代方法"><a href="#数组迭代方法" class="headerlink" title="数组迭代方法"></a>数组迭代方法</h3><p><strong>迭代、循环、遍历</strong></p>
-<h4 id="14）forEach"><a href="#14）forEach" class="headerlink" title="14）forEach"></a>14）forEach</h4><ul>
-<li><strong>作用：遍历数组中的每一项</strong></li>
-<li><strong>参数：函数</strong></li>
-<li><strong>返回值：undefined</strong></li>
-<li><strong>是否修改原数组：否</strong></li>
-<li><strong>foreach方法 用来遍历数组的每一项 forEach方法没有返回值</strong></li>
-<li></li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>item</td>
-<td>必需。当前元素。</td>
-</tr>
-<tr>
-<td><em>index</em></td>
-<td>可选。当前元素的索引值。</td>
-</tr>
-<tr>
-<td><em>array</em></td>
-<td>可选。当前元素所属的数组对象。</td>
-</tr>
-</tbody></table>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">vararr01=[1,2,3];</span><br><span class="line"></span><br><span class="line">vararr02=arr01.forEach(function(item,index,array)&#123;</span><br><span class="line"></span><br><span class="line">    console.log(arr01[index]);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-
-<h4 id="15）map-结束"><a href="#15）map-结束" class="headerlink" title="15）map(结束)"></a>15）map(结束)</h4><ul>
-<li><strong>作用：把一个数组可以映射成一个新的数组</strong></li>
-<li><strong>参数：函数</strong></li>
-<li><strong>返回值：映射后的新数组</strong></li>
-<li><strong>是否修改原数组：否</strong></li>
-<li><strong>map()方法经常拿来遍历数组，但是不改变原数组，但是会返回一个新的数组</strong></li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">vararr01=[1,2,3];</span><br><span class="line"></span><br><span class="line">vararr02=arr01.map(function(item,index,array)&#123;</span><br><span class="line"></span><br><span class="line">    returnitem+1;</span><br><span class="line"></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">    console.log(arr01);</span><br><span class="line"></span><br><span class="line">    console.log(arr02);</span><br></pre></td></tr></table></figure>
-
             
         </div>
     </div>
@@ -529,7 +326,7 @@
     <div id="footer-wrap">
         <div>
             &copy;
-            2022 - 2024 摸鱼小屋
+            2022 - 2024 摸鱼の小屋
             <span id="footer-icon">
                 <i class="fa-solid fa-font-awesome fa-fw"></i>
             </span>

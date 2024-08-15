@@ -3,10 +3,10 @@
 <html lang="zh-Hans">
 <head>
     <meta charset="utf-8" />
-    <title>day01 | 摸鱼小屋</title>
+    <title>day01 | 摸鱼の小屋</title>
     <meta name="author" content="yuumoyu" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
+    <meta name="description" content="omomo" />
+    <meta name="keywords" content="moyu" />
     <meta
         name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
@@ -55,7 +55,7 @@
         <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
     <nav id="desktop-menu">
         <a class="title" href="/">
-            <span>摸鱼小屋</span>
+            <span>摸鱼の小屋</span>
         </a>
         
         <a href="/">
@@ -87,7 +87,7 @@
     <nav id="mobile-menu">
         <div class="title" @click="showMenuItems = !showMenuItems">
             <i class="fa-solid fa-bars fa-fw"></i>
-            <span>&emsp;摸鱼小屋</span>
+            <span>&emsp;摸鱼の小屋</span>
         </div>
         <transition name="slide">
             <div class="items" v-show="showMenuItems">
@@ -167,6 +167,9 @@
 <p><strong>3) 每个元素在数组中有一个位置, 以数字表示,称为<em>索引</em>(有时也称为下标)。</strong></p>
 <p><strong>4) 数组的元素可以是任何类型。</strong></p>
 <p><strong>5) 数组索引从 0 开始,数组最大能容纳 4294967295 个元素</strong></p>
+<span id="more"></span>
+
+
 <h2 id="2-创建数组"><a href="#2-创建数组" class="headerlink" title="2 创建数组"></a>2 创建数组</h2><h3 id="2-1-使用数组直接量"><a href="#2-1-使用数组直接量" class="headerlink" title="2.1 使用数组直接量"></a>2.1 使用数组直接量</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//定义数组，一般就用这种简写方式</span></span><br><span class="line"><span class="keyword">var</span> arr = [<span class="string">&quot;西瓜&quot;</span>,<span class="string">&quot;柚子&quot;</span>,<span class="number">111</span>,<span class="literal">true</span>,<span class="string">&quot;adc&quot;</span>,<span class="string">&quot;[111,222,333]&quot;</span>]</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr);</span><br><span class="line"></span><br><span class="line"><span class="comment">//其他方式</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//其一</span></span><br><span class="line"><span class="keyword">var</span> arr01=[];</span><br><span class="line">arr01[<span class="number">0</span>]=<span class="number">111</span>;</span><br><span class="line">arr01[<span class="number">1</span>]=<span class="number">222</span>;</span><br><span class="line">arr01[<span class="number">2</span>]=<span class="number">333</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//其二 构造函数创建</span></span><br><span class="line"><span class="keyword">var</span> arr02=<span class="keyword">new</span> <span class="title class_">Array</span>();</span><br><span class="line">arr02[<span class="number">0</span>]=<span class="number">111</span>;</span><br><span class="line">arr02[<span class="number">1</span>]=<span class="number">222</span>;</span><br><span class="line">arr02[<span class="number">2</span>]=<span class="number">333</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr02);</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <h2 id="3-读写数组元素"><a href="#3-读写数组元素" class="headerlink" title="3 读写数组元素"></a>3 读写数组元素</h2><p><strong>使用操作符</strong>[]<strong>来读写数组的每一个元素,</strong>[]<strong>中是数组的索引。</strong></p>
@@ -384,7 +387,7 @@
     <div id="footer-wrap">
         <div>
             &copy;
-            2022 - 2024 摸鱼小屋
+            2022 - 2024 摸鱼の小屋
             <span id="footer-icon">
                 <i class="fa-solid fa-font-awesome fa-fw"></i>
             </span>
