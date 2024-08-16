@@ -164,6 +164,9 @@
         </span>
     </div>
 </div>
+
+
+
 <div
     id="home-posts-wrap"
     ref="homePostsWrap"
@@ -382,7 +385,7 @@
         </div>
         <div class="name">yuumoyu</div>
         <div class="description">
-            <p>Description<br>…</p>
+            <p>sakara Description …</p>
 
         </div>
         
@@ -401,7 +404,29 @@
     </div>
     
 </div>
+<script src="https://unpkg.com/oh-my-live2d@latest"></script>
+<script>
+  OML2D.loadOml2d({
+    models: [
+      {
+        path: 'https://model.oml2d.com/HK416-1-normal/model.json',
+        position: [0, 60],
+        scale: 0.08,
+        stageStyle: {
+          height: 450
+        }
+      }
+    ]
+  });
 
+
+  setInterval(function() {
+  var oml2dstage = document.getElementById("oml2d-stage");
+  oml2dstage.style.right = "0px";
+  oml2dstage.style.left = "auto";
+}, 500);  // 1000 毫秒等于 1 秒
+
+</script>
             <footer id="footer">
     <div id="footer-wrap">
         <div>
